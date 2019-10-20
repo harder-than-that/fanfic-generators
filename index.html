@@ -35,7 +35,8 @@
       /*** GLOBALS ***/
       
       let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
-      let boys = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
+      let names = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
+      let nicknames = ['Namjoon', 'Jin', 'Yoongi', 'Hobi', 'Jimin', 'Tae', 'Jungkook']
       // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
       let getRand = function(num) {return Math.floor(num * Math.random()) }
       
@@ -46,8 +47,23 @@
       });
       
       $("#spin2").click(function(){
-        let boy = boys[getRand(boys.length)]
+        let boy = names[getRand(names.length)]
         $("#spin2result").text(boy);
+      });
+      
+      $("#spin3").click(function(){
+        let boy = nicknames[getRand(nicknames.length)]
+        let which = ['Truth', 'Dare']
+        let result = boy + " chose " + which[getRand(2)]
+        $("#spin3result").text(result);
+      });
+      
+      $("#spin4").click(function(){
+        let boy1 = nicknames[getRand(nicknames.length)]
+        let boy2 = nicknames[getRand(nicknames.length)]
+        while (boy2 == boy1) { boy2 = nicknames[getRand(nicknames.length)] }
+        let result = boy1 + " X " + boy2
+        $("#spin4result").text(result);
       });
       
     });
@@ -60,7 +76,7 @@
     </div>
     
     <div class="jumbotron">
-      <h2 class="display-2">Various Games</h2>
+      <h2 class="display-4">Various Games</h2>
       <p class="lead">Add some fate to your fic! Use these generators for scenes about drinking and party games.</p>
       <div class="row">
         <div class="col-sm-4">
@@ -78,7 +94,41 @@
             <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
             <div class="card-body">
               <h5 class="card-title">Spin the bottle</h5>
-              <button id="spin2" class="btn btn-primary btn-lg" role="button">Spin</button>
+              <button id="spin2" class="btn btn-primary btn-lg" role="button">Spin Bottle</button>
+              <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
+            <div class="card-body">
+              <h5 class="card-title">Truth or Dare</h5>
+              <button id="spin3" class="btn btn-primary btn-lg" role="button">Choose</button>
+              <div id="spin3result" class="alert alert-secondary" role="alert">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-4">Start your Fic</h2>
+      <p class="lead">Need an idea to get you started?</p>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <img src="spin.jpg" class="card-img-top" alt="bts spin wheel of punishments">
+            <div class="card-body">
+              <h5 class="card-title">One True Pairing of Fate</h5>
+              <button id="spin4" class="btn btn-primary btn-lg" role="button">Pair</button>
+              <div id="spin4result" class="alert alert-secondary" role="alert">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-center">
+            <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
+            <div class="card-body">
+              <h5 class="card-title">Meet Cute</h5>
+              <button id="spin2" class="btn btn-primary btn-lg" role="button">Fate</button>
               <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
