@@ -66,6 +66,17 @@
         $("#spin4result").text(result);
       });
       
+      $("#spin5").click(function(){
+        let boys = shuffle(nicknames)
+        let result = `Mafia: ${boys[0]}
+Mafia: ${boys[1]}
+Doctor: ${boys[2]}
+Citizen: ${boys[3]}
+Citizen: ${boys[4]}
+Citizen: ${boys[5]}
+Citizen: ${boys[6]}`
+        $("#spin5result").text(result);
+      });
     });
   </script>
 </head>
@@ -76,10 +87,9 @@
     </div>
     
     <div class="jumbotron">
-      <div class="row">
-        <h2 class="display-4">Various Games</h2>
-        <p class="lead">Add some fate to your fic! Use these generators for scenes about drinking and party games.</p>
-        <div class="col-sm-4">
+      <h2 class="display-4">Various Games</h2>
+      <p class="lead">Add some fate to your fic! Use these generators for scenes about drinking and party games.</p>
+        <div class="card-deck">
           <div class="card text-center">
             <img src="spin.jpg" class="card-img-top" alt="bts spin wheel of punishments">
             <div class="card-body">
@@ -88,8 +98,6 @@
               <div id="spin1result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4">
           <div class="card text-center">
             <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
             <div class="card-body">
@@ -98,43 +106,34 @@
               <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4">
           <div class="card text-center">
-            <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
+            <img src="yoongi_happy.gif" class="card-img-top" alt="yoongi wins">
             <div class="card-body">
               <h5 class="card-title">Truth or Dare</h5>
               <button id="spin3" class="btn btn-primary btn-lg" role="button">Choose</button>
               <div id="spin3result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
           <div class="card text-center">
-            <img src="spin.jpg" class="card-img-top" alt="bts spin wheel of punishments">
+            <img src="bts_bed.jpg" class="card-img-top" alt="bts play game on bed">
             <div class="card-body">
-              <h5 class="card-title">Sex Act Spinner</h5>
-              <button id="spin1" class="btn btn-primary btn-lg" role="button">Spin</button>
-              <div id="spin1result" class="alert alert-secondary" role="alert">&nbsp;</div>
+              <h5 class="card-title">Mafia</h5>
+              <button id="spin5" class="btn btn-primary btn-lg" role="button">Assign Roles</button>
+              <div id="spin5result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <h2 class="display-4">Start your Fic</h2>
-        <p class="lead">Need an idea to get you started?</p>
-        <div class="col-sm-4">
+        <div class="card-deck">
+          <h2 class="display-4">Start your Fic</h2>
+          <p class="lead">Need an idea to get you started?</p>
           <div class="card text-center">
-            <img src="spin.jpg" class="card-img-top" alt="bts spin wheel of punishments">
+            <img src="bts1.jpg" class="card-img-top" alt="bts">
             <div class="card-body">
               <h5 class="card-title">One True Pairing of Fate</h5>
               <button id="spin4" class="btn btn-primary btn-lg" role="button">Pair</button>
               <div id="spin4result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
-        </div>
         <!--<div class="col-sm-4">
           <div class="card text-center">
             <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
