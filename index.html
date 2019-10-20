@@ -12,27 +12,45 @@
   </script>
   <script>
     $(document).ready(function(){
+      /*** GLOBALS ***/
+      
       let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
+      // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
+      let getRand = function(num) {return Math.floor(num * Math.random()) }
+      
+      /*** EVENTS ***/
       $("#spin1").click(function(){
+        
         let act = acts[getRand(acts.length)]
         $("#spin1result").text(act);
       });
       
-      let getRand = function(num) {return Math.ceil(num * Math.random()) }
+      
     });
   </script>
 </head>
 <body>
   <div class="container">
-    <h1>BTS Fanfic Generators</h1>
-    
+    <h1>BTS Fanfic Idea Generators</h1>
+    <h2>Spice up your fic with some random number generated situations!<h2>
     
     <div class="jumbotron">
-      <h2 class="display-4">Random sex acts</h2>
+      <h2 class="display-4">Various Games</h2>
       <p class="lead">In one my fics I have the boys play a game using a wheel of fortune, where each slice is a different fun activity. 
         Here's what I used:</p>
-      <button id="spin1" class="btn btn-primary btn-lg" role="button">Spin</button>
-      <h4 id="spin1result"></h4>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sex Act Spinner</h5>
+          <button id="spin1" class="btn btn-primary btn-lg" role="button">Spin</button>
+          <div id="spin1result"></div>
+        </div>
+      </div>
+  </div>
+</div>
+      
     </div>
+    
+    
 </body>
 </html>
