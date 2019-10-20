@@ -38,7 +38,18 @@
       let names = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
       let nicknames = ['Namjoon', 'Jin', 'Yoongi', 'Hobi', 'Jimin', 'Tae', 'Jungkook']
       // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
-      let getRand = function(num) {return Math.floor(num * Math.random()) }
+      let getRand = function(num) {
+        return Math.floor(num * Math.random()) 
+      }
+      // shuffle from https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+      let shuffle = function(array) {
+        for(let i = array.length — 1; i > 0; i--){
+          const j = Math.floor(Math.random() * i)
+          const temp = array[i]
+          array[i] = array[j]
+          array[j] = temp
+        }
+      }
       
       /*** EVENTS ***/
       $("#spin1").click(function(){
@@ -68,15 +79,10 @@
       
       $("#spin5").click(function(){
         let boys = shuffle(nicknames)
-        let result = "Mafia: " + boys[0] +
-        "\nMafia: " + boys[1] +
-        "\nDoctor: " + boys[2] +
-        "\nCitizen: " + boys[3] +
-        "\nCitizen: " + boys[4] +
-        "\nCitizen: " + boys[5] +
-        "\nCitizen: " + boys[6] 
+        let result = "Mafia: " + boys[0] + "\nMafia: " + boys[1] + "\nDoctor: " + boys[2] + "\nCitizen: " + boys[3] + "\nCitizen: " + boys[4] + "\nCitizen: " + boys[5] + "\nCitizen: " + boys[6];
         $("#spin5result").text(result);
       });
+      
     });
   </script>
 </head>
