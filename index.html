@@ -9,6 +9,14 @@
     #title {
       width: 100%; 
       background-image: url('title.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 20px 0;
+    }
+    #title-img {
+      visibility: hidden; 
+      max-width: 100%;
     }
     .btn, .btn-lg {
       margin-bottom: 20px;
@@ -47,7 +55,9 @@
 </head>
 <body>
   <div class="container">
-    <div id="title" alt="BTS Fanfic Idea Generator"></div>
+    <div id="title" alt="BTS Fanfic Idea Generator">
+      <img id="title-img" src="title.png" />
+    </div>
     
     <div class="jumbotron">
       <h2 class="display-4">Various Games</h2>
