@@ -20,6 +20,7 @@
       /*** GLOBALS ***/
       
       let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
+      let boys = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
       // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
       let getRand = function(num) {return Math.floor(num * Math.random()) }
       
@@ -27,6 +28,11 @@
       $("#spin1").click(function(){
         let act = acts[getRand(acts.length)]
         $("#spin1result").text(act);
+      });
+      
+      $("#spin2").click(function(){
+        let boy = boys[getRand(boys.length)]
+        $("#spin2result").text(boy);
       });
       
     });
@@ -39,12 +45,21 @@
     <div class="jumbotron">
       <h2 class="display-4">Various Games</h2>
       <p class="lead">In one my fics I have the boys play a game using a wheel of fortune, where each slice is a different fun activity. Here's what I used:</p>
-      <div class="card" style="width: 18rem;">
-        <img src="bts_spin_sm.jpg" class="card-img-top" alt="bts spin wheel of punishments">
+      <div class="card text-center">
+        <img src="suga_wheel.jpg" class="card-img-top" alt="bts spin wheel of punishments">
         <div class="card-body">
-          <h5 class="card-title text-center">Sex Act Spinner</h5>
+          <h5 class="card-title">Sex Act Spinner</h5>
           <button id="spin1" class="btn btn-primary btn-lg" role="button">Spin</button>
           <div id="spin1result" class="alert alert-secondary" role="alert">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="card text-center">
+        <img src="tae_drink.jpg" class="card-img-top" alt="bts spin wheel of punishments">
+        <div class="card-body">
+          <h5 class="card-title">Spin the bottle</h5>
+          <button id="spin2" class="btn btn-primary btn-lg" role="button">Spin</button>
+          <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
         </div>
       </div>
     </div>
