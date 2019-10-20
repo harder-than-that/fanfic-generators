@@ -1,11 +1,38 @@
 
 <!DOCTYPE html>
 <head>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function(){
+      let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', ]
+      $("#spin1").click(function(){
+        let act = acts[getRand(acts.length())]
+        $("#spin1result").text(act);
+      });
+      
+      let getRand(num) = Math.ceiling(num * Math.random(10));
+    });
+  </script>
 </head>
 <body>
-<h1>BTS Fanfic Generators</h1>
-<h2>Drinking Games<h2>
-<p>Imagine a wheel of fortune where each slice is different 'punishment'</p>
+  <div class="container">
+    <h1>BTS Fanfic Generators</h1>
+    
+    
+    <div class="jumbotron">
+      <h2 class="display-4">Random sex acts</h2>
+      <p class="lead">In one my fics I have the boys play a game using a wheel of fortune, where each slice is a different fun activity. 
+        Here's what I used:</p>
+      <button id="spin1" class="btn btn-primary btn-lg" role="button">Spin</button>
+      <h4 id="spin1result"></h4>
+    </div>
 </body>
 </html>
