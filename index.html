@@ -68,13 +68,13 @@
       
       $("#spin5").click(function(){
         let boys = shuffle(nicknames)
-        let result = `Mafia: ${boys[0]}
-Mafia: ${boys[1]}
-Doctor: ${boys[2]}
-Citizen: ${boys[3]}
-Citizen: ${boys[4]}
-Citizen: ${boys[5]}
-Citizen: ${boys[6]}`
+        let result = "Mafia: " + boys[0] + \n +
+        "Mafia: " + boys[1] + \n +
+        "Doctor: " + boys[2] + \n +
+        "Citizen: " + boys[3] + \n +
+        "Citizen: " + boys[4] + \n +
+        "Citizen: " + boys[5] + \n +
+        "Citizen: " + boys[6] 
         $("#spin5result").text(result);
       });
     });
@@ -106,6 +106,9 @@ Citizen: ${boys[6]}`
               <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
+        </div>
+        <br>
+        <div class="card-deck">
           <div class="card text-center">
             <img src="yoongi_happy.gif" class="card-img-top" alt="yoongi wins">
             <div class="card-body">
@@ -123,9 +126,10 @@ Citizen: ${boys[6]}`
             </div>
           </div>
         </div>
+        <br>
+        <h2 class="display-4">Start your Fic</h2>
+        <p class="lead">Need an idea to get you started?</p>
         <div class="card-deck">
-          <h2 class="display-4">Start your Fic</h2>
-          <p class="lead">Need an idea to get you started?</p>
           <div class="card text-center">
             <img src="bts1.jpg" class="card-img-top" alt="bts">
             <div class="card-body">
@@ -134,16 +138,7 @@ Citizen: ${boys[6]}`
               <div id="spin4result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
-        <!--<div class="col-sm-4">
-          <div class="card text-center">
-            <img src="tae_drink.gif" class="card-img-top" alt="tae opening bottle">
-            <div class="card-body">
-              <h5 class="card-title">Meet Cute</h5>
-              <button id="spin2" class="btn btn-primary btn-lg" role="button">Fate</button>
-              <div id="spin2result" class="alert alert-secondary" role="alert">&nbsp;</div>
-            </div>
-          </div>
-        </div>-->
+        </div>
       </div>
     </div>
   </div>
