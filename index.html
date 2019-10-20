@@ -14,11 +14,11 @@
     $(document).ready(function(){
       let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
       $("#spin1").click(function(){
-        let act = acts[getRand(acts.length())]
+        let act = acts[getRand(acts.length)]
         $("#spin1result").text(act);
       });
       
-      let getRand = function(num) {return Math.ceiling(num * Math.random(10)) }
+      let getRand = function(num) {return Math.ceiling(num * Math.random()) }
     });
   </script>
 </head>
