@@ -37,18 +37,20 @@
       let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
       let names = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
       let nicknames = ['Namjoon', 'Jin', 'Yoongi', 'Hobi', 'Jimin', 'Tae', 'Jungkook']
+      let aus = ["College", "Highschool", "Vampire", "Victorian/Steampunk", "Western", "Joseon Period", "Younger version of member travels to the present", "Coffee Shop", "Sugar Daddy", "Gender swap", "Cabin in the woods/Horror", "Harry Potter", "Superpowers/Marvel", "Hunger Games", "Assassins/Spies", "Mafia/Crime", "Space", "Dystopia/Apocolypse", "Angels and Demons", "Magic/Wizard", "Hybrid", "ABO", "Royalty", "Werwolves", "Stalker/Serial Killer", "Hanahaki disease", "Soulmates", "Greek Gods/Percy Jackson", "Mundane jobs/Blue Village", "Tattoo Shop", "Canon Compliant", "Cursed by a witch", "Flower Boys/Bullied", "Hotel/Resort/Vacation"];
       // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
       let getRand = function(num) {
         return Math.floor(num * Math.random()) 
       }
       // shuffle from https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
-      let shuffle = function(array) {
-        for(let i = array.length — 1; i > 0; i--){
+      let shuffle = function(arr) {
+        for(let i = arr.length — 1; i > 0; i--){
           const j = Math.floor(Math.random() * i)
-          const temp = array[i]
-          array[i] = array[j]
-          array[j] = temp
+          const temp = arr[i]
+          arr[i] = arr[j]
+          arr[j] = temp
         }
+        return arr;
       }
       
       /*** EVENTS ***/
@@ -81,6 +83,12 @@
         let boys = shuffle(nicknames)
         let result = "Mafia: " + boys[0] + "\nMafia: " + boys[1] + "\nDoctor: " + boys[2] + "\nCitizen: " + boys[3] + "\nCitizen: " + boys[4] + "\nCitizen: " + boys[5] + "\nCitizen: " + boys[6];
         $("#spin5result").text(result);
+      });
+      
+      $("#spin6").click(function(){
+        let au = aus[getRand(aus.length)]
+        let result = au + " AU"
+        $("#spin6result").text(result);
       });
       
     });
@@ -142,6 +150,14 @@
               <h5 class="card-title">One True Pairing of Fate</h5>
               <button id="spin4" class="btn btn-primary btn-lg" role="button">Pair</button>
               <div id="spin4result" class="alert alert-secondary" role="alert">&nbsp;</div>
+            </div>
+          </div>
+          <div class="card text-center">
+            <img src="bts_bed.jpg" class="card-img-top" alt="bts">
+            <div class="card-body">
+              <h5 class="card-title">Alternate Universe</h5>
+              <button id="spin6" class="btn btn-primary btn-lg" role="button">Travel</button>
+              <div id="spin6result" class="alert alert-secondary" role="alert">&nbsp;</div>
             </div>
           </div>
         </div>
