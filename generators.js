@@ -1,10 +1,11 @@
 $(document).ready(function(){
-  /*** GLOBALS ***/
+  /*** CONSTANTS ***/
   
   let acts = ['kiss', 'blowjob', 'kiss ear', '10 spankings', 'strip', 'handjob', 'suck nipples']
   let names = ['Kim Namjoon', 'Kim Seokjin', 'Min Yoongi', 'Jung Hoseok', 'Park Jimin', 'Kim Taehyung', 'Jeon Jungkook']
   let nicknames = ['Namjoon', 'Jin', 'Yoongi', 'Hobi', 'Jimin', 'Tae', 'Jungkook']
-  let aus = ["College", "Highschool", "Vampire", "Victorian/Steampunk", "Western", "Joseon Period", "Younger version of member travels to the present", "Coffee Shop", "Sugar Daddy", "Gender swap", "Cabin in the woods/Horror", "Harry Potter", "Superpowers/Marvel", "Hunger Games", "Assassins/Spies", "Mafia/Crime", "Space", "Dystopia/Apocolypse", "Angels and Demons", "Magic/Wizard", "Hybrid", "ABO", "Royalty", "Werwolves", "Stalker/Serial Killer", "Hanahaki disease", "Soulmates", "Greek Gods/Percy Jackson", "Mundane jobs/Blue Village", "Tattoo Shop", "Canon Compliant", "Cursed by a witch", "Flower Boys/Bullied", "Hotel/Resort/Vacation"];
+  let aus = ["College", "Highschool", "Vampire", "Victorian/Steampunk", "Telepathy", "Age swap", "Fairy/Elf Fantasy Land", "Body Swap", "Joseon period", "Time Travel", "Coffee Shop", "Sugar Daddy", "Cabin in the Woods/Horror", "Harry Potter", "Superpowers/Marvel", "Hunger Games", "Assassins/Spies", "Mafia/Crime", "Dystopia/Apocalypse", "Angels/Demons", "Magic/Witches", "Hybrid", "ABO", "Royalty", "Werewolves", "Stalker/Serial Killer", "Soulmates", "Greek Gods/Percy Jackson", "Blue Village", "Canon Compliant", "Cursed by a Witch", "Flower Boys/Bullied", "Hotel/Resort/Vacation", "Road Trip", "Kidnapped", "Deserted Island", "Groundhog's Day"];
+
   // getRand -> num should be rand(max - min + 1)) + min; so if min is 0, and max is len - 1, num is len
   let getRand = function(num) {
     return Math.floor(num * Math.random()) 
@@ -42,7 +43,7 @@ $(document).ready(function(){
     let boy1 = nicknames[getRand(nicknames.length)]
     let boy2 = nicknames[getRand(nicknames.length)]
     while (boy2 == boy1) { boy2 = nicknames[getRand(nicknames.length)] }
-    let result = boy1 + " X " + boy2
+    let result = boy1 + "/" + boy2
     $("#spin4result").text(result);
   });
   
