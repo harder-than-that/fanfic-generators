@@ -1,0 +1,18 @@
+#title {
+  width: 100%; 
+  background-image: url('title.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 20px 0;
+}
+#title-img {
+  visibility: hidden; 
+  max-width: 100%;
+}
+.btn, .btn-lg {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  max-height: 300px;
+}
